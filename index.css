@@ -1,173 +1,82 @@
-body {
-    height: 68rem;
-}
-h1 {
-    margin-top: 4rem;
-    margin-bottom: 0rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    color: rgb(228, 86, 35);
-    font-family: Arial;
-    font-size: 3rem;
-    font-weight: bold;
-}
-p {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    color: white;
-    font-size: 1.2rem;
-    font-family: Verdana;
-    font-weight: bold;
-}
-.menu {
-    height: 7%;
-    width: 97%;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    display: block;
-    align-content: center;
-    padding: 8px 0px 8px 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: solid 2px rgb(172, 72, 6);  
-    border-radius: 4px;
-}
-.logo {
-    margin-left: 2%;
-    margin-right: 5%;
-}
-.menu-buttons {
-    padding: 4px 4px;
-    height: 80%;
-    width: 20%;
-    font-size: 100%;
-    font-family: Arial;
-    font-weight: bold;
-    color: rgb(255, 197, 5);
-    background-color: rgb(175, 93, 0);
-    border: solid 2px rgba(56, 35, 3, 0.75);
-    border-radius: 4px;
-    vertical-align: 25px;
-    cursor: pointer;
-    transition: 0.1s;
-}
-.menu-buttons:hover {
-    box-shadow: 1px 1px 0px 1px rgba(121, 120, 120, 0.445);
-}
-.menu-buttons:active {
-    opacity: 0.75;
-}
-.hero-section {
-    margin-bottom: 4rem;
-    padding: 0px 0px 2rem 0px;
-    height: auto;
-    width: 90%;
-    margin-top: 4rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    border: solid 2px gray;
-    background-color: rgba(41, 41, 41, 0.945)
-}
-.expanded-logo {
-    margin-top: 2rem;
-    display: block;
-    justify-self: center;
-    width: 20%;
-}
-.welcome-text {
-    margin-top: 2.5rem;
-    margin-left: 1rem;
-    font-family: Verdana;
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgb(233, 152, 32);
-}
-.kerots-image {
-    margin-bottom: 4rem;
-    margin-top: 4rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    height: 450px;
-    width: 80%;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px orange;
-    justify-self: center;
-}
-.left {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    height: 450px;
-    width: 80%;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px orange;
-    justify-self: start;
-}
-.right {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    height: 450px;
-    width: 80%;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px orange;
-    justify-self: end;
-}
-.left-text {
-    justify-self: start;
-}
-.right-text {
-    justify-self: end;
-}
-.back {
-    display: inline-block;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 3.5rem;
-    color: antiquewhite;
-    font-size: 1.5rem;
-    font-family: Arial;
-    font-weight: bold;
-    text-decoration: none;
-    justify-self: start;
-}
-.back:hover {
-    text-decoration: underline;
-}
-.credits {
-    display: inline-block;
-    color: rgb(173, 0, 0);
-    margin-left: 5rem;
-}
-.author {
-    display: inline-flex;
-    color: rgb(255, 115, 0);
-    font-size: 1.4rem;
-    font-family: Verdana;
-    font-weight: bold;
-    margin-left: 5rem;
-    justify-self: end;
-}
-.a-link {
-    color: rgb(255, 115, 0);
-    text-decoration: solid;
-}
-.a-link:hover {
-    color: rgb(255, 158, 13);
-    font-weight: bolder;
-    text-decoration: underline;
-}
+ /* Responsive Enhancements */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .menu-buttons {
+            width: auto;
+            min-width: 100px;
+            margin: 4px;
+        }
+
+        .hero-section {
+            width: 95%;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .expanded-logo,
+        .kerots-image,
+        .left,
+        .right {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        .back,
+        .credits,
+        .author {
+            display: block;
+            text-align: center;
+            margin: 1rem auto;
+        }
+
+        @media (min-width: 768px) {
+            .menu {
+                justify-content: space-around;
+            }
+
+            .menu-buttons {
+                width: 20%;
+            }
+
+            .left-text, .right-text {
+                text-align: left;
+                margin-left: 5%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .hero-section {
+                max-width: 1200px;
+            }
+
+            .menu-buttons {
+                font-size: 1.2rem;
+            }
+        }
